@@ -18,10 +18,10 @@ public class XSLTTransformerServiceImpl implements XSLTTransformerService {
 
 	public XSLTTransformerServiceImpl(String xsltSource) {
 		super();
-		StreamSource stylesource = new StreamSource(this.getClass().getResourceAsStream("/" + xsltSource));
 		Transformer transformerTemp = null;
 		try {
-			transformerTemp = TransformerFactory.newInstance().newTransformer(stylesource);
+			transformerTemp = TransformerFactory.newInstance()
+					.newTransformer(new StreamSource(this.getClass().getResourceAsStream("/" + xsltSource)));
 		} catch (TransformerConfigurationException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -33,9 +33,9 @@ public class XSLTTransformerServiceImpl implements XSLTTransformerService {
 	}
 
 	public String transformXml(String dataFileName) throws TransformerException {
-		StreamSource source = new StreamSource(this.getClass().getResourceAsStream("/" + dataFileName));
 		StringWriter sw = new StringWriter();
-		transformer.transform(source, new StreamResult(sw));
+		transformer.transform(new StreamSource(this.getClass().getResourceAsStream("/" + dataFileName)),
+				new StreamResult(sw));
 		return sw.toString();
 	}
 }
