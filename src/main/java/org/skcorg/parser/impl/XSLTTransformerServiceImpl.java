@@ -17,7 +17,6 @@ public class XSLTTransformerServiceImpl implements XSLTTransformerService {
 	private final Transformer transformer;
 
 	public XSLTTransformerServiceImpl(String xsltSource) {
-		super();
 		Transformer transformerTemp = null;
 		try {
 			transformerTemp = TransformerFactory.newInstance()
