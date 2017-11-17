@@ -32,7 +32,7 @@ public class XSLTTransformerServiceImpl implements XSLTTransformerService {
 	}
 
 	public String transformXml(String dataFileName) throws TransformerException {
-		StringWriter sw = new StringWriter();
+		final StringWriter sw = new StringWriter();
 		transformer.transform(new StreamSource(this.getClass().getResourceAsStream("/" + dataFileName)),
 				new StreamResult(sw));
 		return sw.toString();
