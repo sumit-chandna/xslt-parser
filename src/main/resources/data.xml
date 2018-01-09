@@ -1,21 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<PHONEBOOK>
-	<PERSON>
-		<NAME>Joe Wang</NAME>
-		<EMAIL>joe@yourserver.com</EMAIL>
-		<TELEPHONE>202-999-9999</TELEPHONE>
-		<WEB>www.java2s.com</WEB>
-	</PERSON>
-	<PERSON>
-		<NAME>Karol</NAME>
-		<EMAIL>karol@yourserver.com</EMAIL>
-		<TELEPHONE>306-999-9999</TELEPHONE>
-		<WEB>www.java2s.com</WEB>
-	</PERSON>
-	<PERSON>
-		<NAME>Green</NAME>
-		<EMAIL>green@yourserver.com</EMAIL>
-		<TELEPHONE>202-414-9999</TELEPHONE>
-		<WEB>www.java2s.com</WEB>
-	</PERSON>
-</PHONEBOOK>
+<AirShoppingRQ Target="Production" Version="15.2"
+	TransactionIdentifier="db690318-8908-4e1e-8ca9-4bff8723fe30">
+	<Document>
+		<Name>NDC GATEWAY</Name>
+		<ReferenceVersion>1.0</ReferenceVersion>
+	</Document>
+	<Party>
+		<Sender>
+			<TravelAgencySender>
+				<Name>Test sender</Name>
+				<Contacts>
+					<Contact>
+						<EmailContact>
+							<Address>abc@tc.com</Address>
+						</EmailContact>
+					</Contact>
+				</Contacts>
+				<IATA_Number>35201165</IATA_Number>
+				<AgencyID>test</AgencyID>
+			</TravelAgencySender>
+		</Sender>
+	</Party>
+	<Parameters>
+		<CurrCodes>
+			<CurrCode>INR</CurrCode>
+		</CurrCodes>
+	</Parameters>
+	<Travelers>
+		<Traveler>
+			<AnonymousTraveler ObjectKey="ADT1">
+				<PTC Quantity="1">ADT</PTC>
+			</AnonymousTraveler>
+		</Traveler>
+		<Traveler>
+			<AnonymousTraveler ObjectKey="CHD1">
+				<PTC Quantity="1">CHD</PTC>
+			</AnonymousTraveler>
+		</Traveler>
+	</Travelers>
+	<CoreQuery>
+		<OriginDestinations>
+			<OriginDestination OriginDestinationKey="OD1">
+				<Departure>
+					<AirportCode>DEL</AirportCode>
+					<Date>2018-01-26</Date>
+				</Departure>
+				<Arrival>
+					<AirportCode>BOM</AirportCode>
+				</Arrival>
+			</OriginDestination>
+		</OriginDestinations>
+	</CoreQuery>
+	<Preferences>
+		<Preference>
+			<AirlinePreferences>
+				<Airline>
+					<AirlineID>SG</AirlineID>
+				</Airline>
+			</AirlinePreferences>
+		</Preference>
+	</Preferences>
+</AirShoppingRQ>	

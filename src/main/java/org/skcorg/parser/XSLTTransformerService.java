@@ -1,8 +1,8 @@
 package org.skcorg.parser;
 
-import javax.xml.transform.TransformerException;
+import java.util.Map;
 
 public interface XSLTTransformerService {
 
-	public String transformXml(String dataFileName) throws TransformerException;
+	public String transformXml(String dataFileName, Map<String, Object> parameterMap) throws Exception;
 }
