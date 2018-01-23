@@ -264,11 +264,12 @@
 							</FlightDistance>
 							<FlightDuration>
 								<FlightDurationInputted>
-									<xsl:value-of select="ADD_FLI_SVC/ACU_FLI_TIM" />
+									<xsl:value-of select="ADD_FLI_SVC[1]/ACU_FLI_TIM" />
 								</FlightDurationInputted>
 								<Value>
 									<xsl:call-template name="parseDuration">
-										<xsl:with-param name="duration" select="ADD_FLI_SVC/ACU_FLI_TIM" />
+										<xsl:with-param name="duration"
+											select="ADD_FLI_SVC[1]/ACU_FLI_TIM" />
 									</xsl:call-template>
 								</Value>
 							</FlightDuration>

@@ -30,13 +30,13 @@ public class Main {
 	public static void main(String args[]) throws Exception {
 		Main main = new Main();
 		String data1 = new Scanner(Main.class.getResourceAsStream("data.xml"), "UTF-8").useDelimiter("\\A").next();
-		System.out.println(main.transformerServiceRequest.transformXml(data1, prepareParameterMap()));
+		main.transformerServiceRequest.transformXml(data1, prepareParameterMap());
 		String Tp_response = new Scanner(Main.class.getResourceAsStream("TP_Res.xml"), "UTF-8").useDelimiter("\\A")
 				.next();
 		main.execute(main, Tp_response);
 		main.execute(main, Tp_response);
 		main.execute(main, Tp_response);
-		main.execute(main, Tp_response);
+		System.out.println(main.execute(main, Tp_response));
 	}
 
 	private String execute(Main main, String Tp_response) throws Exception {

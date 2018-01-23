@@ -14,20 +14,29 @@
 		var currentDate = new Date();
 		currentDate.setMinutes(currentDate.getMinutes() + 10);
 
-		var year = currentDate.getFullYear();
-		var month = ((currentDate.getMonth() + 1).toString().length === 1 ? ('0'
-		+ (currentDate.getMonth() + 1)) : (currentDate.getMonth() + 1));
-		var day = (currentDate.getDate()).toString().length === 1 ? ('0' +
+		var year =
+		currentDate.getFullYear();
+		var month = ((currentDate.getMonth() +
+		1).toString().length === 1 ? ('0'
+		+ (currentDate.getMonth() + 1)) :
+		(currentDate.getMonth() + 1));
+		var day =
+		(currentDate.getDate()).toString().length === 1 ? ('0' +
 		currentDate.getDate()) : currentDate.getDate();
-		var day = (currentDate.getDate()).toString().length === 1 ? ('0' +
+		var day =
+		(currentDate.getDate()).toString().length === 1 ? ('0' +
 		currentDate.getDate()) : currentDate.getDate();
-		var hours = (currentDate.getHours()).toString().length === 1 ? ('0' +
+		var hours =
+		(currentDate.getHours()).toString().length === 1 ? ('0' +
 		currentDate.getHours()) : currentDate.getHours();
-		var minutes = (currentDate.getMinutes()).toString().length === 1 ? ('0' +
+		var minutes =
+		(currentDate.getMinutes()).toString().length === 1 ? ('0' +
 		currentDate.getMinutes()) : currentDate.getMinutes();
-		var seconds = (currentDate.getSeconds()).toString().length === 1 ? ('0' +
+		var seconds =
+		(currentDate.getSeconds()).toString().length === 1 ? ('0' +
 		currentDate.getSeconds()) : currentDate.getSeconds();
-		var datetime = currentDate.getFullYear() + '-' + month + "-" + day
+		var datetime =
+		currentDate.getFullYear() + '-' + month + "-" + day
 		+ "T" + hours + ":"
 		+ minutes + ":"
 		+ seconds;
@@ -130,7 +139,7 @@
 					<xsl:variable name="onBoard" select="FLI_INF[1]/DEP_ARP" />
 					<xsl:variable name="offBoard" select="FLI_INF[last()]/ARR_ARP" />
 					<xsl:variable name="totalTime"
-						select="sum(FLI_INF/ADD_FLI_SVC/ACU_FLI_TIM)"></xsl:variable>
+						select="sum(FLI_INF/ADD_FLI_SVC[1]/ACU_FLI_TIM)"></xsl:variable>
 					<FlightsOverview>
 						<FlightRef>
 							<xsl:attribute name="ODRef">
