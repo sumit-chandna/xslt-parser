@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<KeyValuePairs>
+  <AirportNames>
+    <Airport Key="LGW">London, Glassgow</Airport>
+    <Airport Key="DXB">Dubai</Airport>
+  </AirportNames>
+  <Carriers>
+    <Carrier Key="EK">Emirates</Carrier>
+    <Carrier Key="QF">Qantas</Carrier>
+  </Carriers>
+  <Equipments>
+    <Equipment Key="388">Airbus A388</Equipment>
+  </Equipments>
+  <Months>
+    <Month Key="JAN">01</Month>
+    <Month Key="FEB">02</Month>
+    <Month Key="MAR">03</Month>
+    <Month Key="APR">04</Month>
+    <Month Key="MAY">05</Month>
+    <Month Key="JUN">06</Month>
+    <Month Key="JUL">07</Month>
+    <Month Key="AUG">08</Month>
+    <Month Key="SEP">09</Month>
+    <Month Key="OCT">10</Month>
+    <Month Key="NOV">11</Month>
+    <Month Key="DEC">12</Month>
+  </Months>
+  <Remarks>
+    <Remark Key="A">Private/SecuRate Phase 3, refundable.</Remark>
+    <Remark Key="B">No restriction on refund.</Remark>
+    <Remark Key="C">Non-refundable.</Remark>
+    <Remark Key="D">No changes allowed</Remark>
+    <Remark Key="E">Non-refundable, no changes allowed.</Remark>
+  </Remarks>
+</KeyValuePairs>

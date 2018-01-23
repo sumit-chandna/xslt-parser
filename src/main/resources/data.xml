@@ -33,6 +33,11 @@
 			</AnonymousTraveler>
 		</Traveler>
 		<Traveler>
+			<AnonymousTraveler ObjectKey="ADT2">
+				<PTC Quantity="1">ADT</PTC>
+			</AnonymousTraveler>
+		</Traveler>
+		<Traveler>
 			<AnonymousTraveler ObjectKey="CHD1">
 				<PTC Quantity="1">CHD</PTC>
 			</AnonymousTraveler>
