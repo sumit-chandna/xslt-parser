@@ -23,13 +23,13 @@ public class Main {
 				"OriginDestinationList.xslt");
 		transformerServicePriceList = new XSLTTransformerServiceImpl(PROVIDER + "response", "PriceList.xslt");
 		transformerServiceFinal = new XSLTTransformerServiceImpl(PROVIDER + "response", "Offer.xslt");
-		transformerServiceRequest = new XSLTTransformerServiceImpl(PROVIDER + "request", "TravelPort-ALL.xsl");
+		transformerServiceRequest = new XSLTTransformerServiceImpl(PROVIDER + "request", "airshoppingRQ-ALL.xsl");
 	}
 
 	@SuppressWarnings("resource")
 	public static void main(String args[]) throws Exception {
 		Main main = new Main();
-		String data1 = new Scanner(Main.class.getResourceAsStream("data1.xml"), "UTF-8").useDelimiter("\\A").next();
+		String data1 = new Scanner(Main.class.getResourceAsStream("data.xml"), "UTF-8").useDelimiter("\\A").next();
 		System.out.println(main.transformerServiceRequest.transformXml(data1, prepareParameterMap()));
 		String Tp_response = new Scanner(Main.class.getResourceAsStream("TP_Res.xml"), "UTF-8").useDelimiter("\\A")
 				.next();
